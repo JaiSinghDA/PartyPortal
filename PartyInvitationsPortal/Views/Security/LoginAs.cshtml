@@ -1,0 +1,65 @@
+﻿@model PartyInvitationsPortal.Contracts.PartyThrowerOrGuest
+
+@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login As</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+
+        <h1><b><center>Sign In</center></b></h1>
+
+        <br />
+        <br />
+
+        <form class="p-a-1" asp-action="LoginAs" method="post">
+            <div asp-validation-summary="All">
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Email">Your email:</label>
+                        <input class="form-control" asp-for="Email" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-group">
+                        <label>Wanna throw a party or You're Guest? </label>
+                        <select class="form-control" asp-for="PTorG">
+                            <option value="">Choose an option</option>
+                            <option value="PartyThrower">Party Thrower</option>
+                            <option value="Guest">Guest</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <center>
+                <div class="row">
+                    <button class="btn btn-primary" type="submit">
+                        Sign In
+                    </button>
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <a asp-action="Register">Click here to register </a>
+                </div>
+
+
+            </center>
+        </form>
+    </div>
+</body>
+</html>

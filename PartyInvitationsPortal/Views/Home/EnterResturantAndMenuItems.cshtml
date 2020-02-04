@@ -1,0 +1,137 @@
+﻿@model PartyInvitationsPortal.Contracts.ResturantNameAndMenuItems
+
+@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <center>
+        <h1 style="color: aqua"><b>Great,You are giving a party.</b></h1>
+        @*<h3>Enter Resturant Name  </h3>*@
+    </center>
+
+
+    <form class="p-a-1" asp-action="AddMenuItems" method="post">
+
+        <div asp-validation-summary="All">
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="resturantName">Enter Resturant Name</label>
+                    <input class="form-control" asp-for="resturantName" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem1">Add Menu Item 1:</label>
+                    <input class="form-control" asp-for="MenuItem1" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem2">Add Menu Item 2:</label>
+                    <input class="form-control" asp-for="MenuItem2" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem3">Add Menu Item 3:</label>
+                    <input class="form-control" asp-for="MenuItem3" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem4">Add Menu Item 4:</label>
+                    <input class="form-control" asp-for="MenuItem4" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem5">Add Menu Item 5:</label>
+                    <input class="form-control" asp-for="MenuItem5" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem6">Add Menu Item 6:</label>
+                    <input class="form-control" asp-for="MenuItem6" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem7">Add Menu Item 7:</label>
+                    <input class="form-control" asp-for="MenuItem7" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem8">Add Menu Item 8:</label>
+                    <input class="form-control" asp-for="MenuItem8" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem9">Add Menu Item 9:</label>
+                    <input class="form-control" asp-for="MenuItem9" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="form-group">
+                    <label asp-for="MenuItem10">Add Menu Item 10:</label>
+                    <input class="form-control" asp-for="MenuItem10" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">
+                Submit
+            </button>
+        </div>
+
+    </form>
+
+</body>
+</html>
