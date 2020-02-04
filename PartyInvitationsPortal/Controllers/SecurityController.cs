@@ -20,6 +20,7 @@ namespace PartyInvitationsPortal.Controllers
 
         public SecurityController(IPartyThrowerOrGuestRepositry PTorGRepositryObj, DbContext appDbContext, IMediator mediator)
         {
+            string name = string.Empty;
             _PTorGRepositryObj = PTorGRepositryObj;
             _appDbContext = appDbContext;
 
