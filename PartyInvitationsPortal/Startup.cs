@@ -10,8 +10,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using PartyInvitationsPortal.StructureMap;
 using PartyPortalInvitations.DataAccess;
+using Serilog;
 using StructureMap;
 
 namespace PartyInvitationsPortal
@@ -20,6 +22,8 @@ namespace PartyInvitationsPortal
     {
         public Startup(IConfiguration configuration)
         {
+            // Init Serilog configuration
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
             Configuration = configuration;
         }
 
@@ -56,7 +60,7 @@ namespace PartyInvitationsPortal
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -69,6 +73,9 @@ namespace PartyInvitationsPortal
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            // logging
+            loggerFactory.AddSerilog();
 
             app.UseMvc(routes =>
             {
