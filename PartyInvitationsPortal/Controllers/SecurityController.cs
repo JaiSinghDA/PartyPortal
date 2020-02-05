@@ -40,6 +40,7 @@ namespace PartyInvitationsPortal.Controllers
             if (ModelState.IsValid)
             {
                 _mediator.Send(registerUser);
+                
 
                 return View("LoginAs");
             }
