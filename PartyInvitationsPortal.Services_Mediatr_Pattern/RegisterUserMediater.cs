@@ -6,31 +6,40 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 
 namespace PartyInvitationsPortal.Services_Mediatr_Pattern
 {
-    class RegisterUserHandler : IRequestHandler<RegisterUser, bool>
+  
+
+
+    class RegisterUserMediater : IRequestHandler<RegisterUser, bool>
     {
-        private IPartyThrowerOrGuestRepositry _PTorGRepositryObj;
+     //   private IPartyThrowerOrGuestRepositry _PTorGRepositryObj;
         private DbContext _appDbContext;
 
-        public RegisterUserHandler(IPartyThrowerOrGuestRepositry PTorGRepositryObj, DbContext appDbContext)
+        public RegisterUserMediater(DbContext appDbContext)
         {
-            _PTorGRepositryObj = PTorGRepositryObj;
+         //   _PTorGRepositryObj = PTorGRepositryObj;
             _appDbContext = appDbContext;
         }
 
-
-      
-
+        //public bool Handle(RegisterUser user)
+        //{
+        //    _appDbContext.Add<RegisterUser>(user);
+        //           _appDbContext.SaveChanges();
+        //    return true;
+        //}
 
         public Task<bool> Handle(RegisterUser request, CancellationToken cancellationToken)
         {
+
             _appDbContext.Add<RegisterUser>(request);
             _appDbContext.SaveChanges();
             return new Task<bool>(() => true);
 
         }
     }
+
+    
 }

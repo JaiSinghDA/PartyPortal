@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using PartyInvitationsPortal.Contracts;
 using PartyPortalInvitations.DataAccess;
 using StructureMap;
@@ -21,6 +22,10 @@ namespace PartyInvitationsPortal.StructureMap
 
             For<DbContext>().LifecycleIs(Lifecycles.Container)
                         .Use<AppDbcontext>();
+
+        //    For<IMediator>().Use<Mediator>();
+
+            
         }
     }
 
