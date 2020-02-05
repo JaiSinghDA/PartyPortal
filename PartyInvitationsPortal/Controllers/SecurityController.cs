@@ -39,7 +39,7 @@ namespace PartyInvitationsPortal.Controllers
             ///////////////////
             if (ModelState.IsValid)
             {
-              _mediator.Send(registerUser);
+                _mediator.Send(registerUser);
 
                 return View("LoginAs");
             }
@@ -48,14 +48,14 @@ namespace PartyInvitationsPortal.Controllers
 
                 return View();
             }
-            ///////////////////////
+            /////////////////////////
 
             //if (ModelState.IsValid)
             //{
 
             //    _appDbContext.Add<RegisterUser>(registerUser);
             //    _appDbContext.SaveChanges();
-            // //show alert registeration sucessfull and navigate to login page
+            //    //show alert registeration sucessfull and navigate to login page
             //    return View("LoginAs");
 
 
@@ -82,10 +82,7 @@ namespace PartyInvitationsPortal.Controllers
         {
             if (ModelState.IsValid)
             {
-              
-                
-
-                RegisterUser userFound = _dbSet.Find(partyThrowerOrGuest.Email.ToString());
+                RegisterUser userFound = _dbSet.Find(partyThrowerOrGuest.Email.ToString() );
 
                 if (userFound != null)
                 {
@@ -105,11 +102,6 @@ namespace PartyInvitationsPortal.Controllers
                 {
                     return View("~/Views/Security/Register.cshtml");
                 }
-
-
-
-
-          
             }
             else
             {

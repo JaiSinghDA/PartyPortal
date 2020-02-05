@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="8.0.0" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="MediatR" Version="5.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="structuremap" Version="4.7.1" />
@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PartyInvitationsPortal.Contracts\PartyInvitationsPortal.Contracts.csproj" />
-    <ProjectReference Include="..\PartyInvitationsPortal.Services_Mediatr_Pattern\PartyInvitationsPortal.Services_Mediatr_Pattern.csproj" />
     <ProjectReference Include="..\PartyPortalInvitations.DataAccess\PartyPortalInvitations.DataAccess.csproj" />
   </ItemGroup>
 

@@ -37,7 +37,7 @@ namespace PartyInvitationsPortal
 
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMediatR(typeof(Startup));
+            services.AddMediatR();
             
 
             // services.AddDbContextPool<AppDbcontext>(

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Text;
 namespace PartyInvitationsPortal.Contracts
 {
 
-    public class PartyThrowerOrGuest
+    public class PartyThrowerOrGuest :   IRequest<bool>
     {
         [Required(ErrorMessage = "Please enter your email address")]
         [RegularExpression(".+\\@.+\\..+",
